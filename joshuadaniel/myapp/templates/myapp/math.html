@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            background-color: cyan; /* Background color */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 350px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: red;
+            border: 3px dashed purple;
+            border-radius: 20px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        input {
+            margin: 8px 0;
+            padding: 8px;
+            width: 90%;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px;
+            width: 95%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>BMI CALCULATOR</h2>
+        <h3>JOSHUA DANIEL A - 25017654</h3>
+
+        <form method="post">
+            {% csrf_token %}
+            <label>HEIGHT [cm]:</label><br>
+            <input type="text" name="height"><br>
+            <label>WEIGHT [kg]:</label><br>
+            <input type="text" name="weight"><br>
+            <button type="submit">CALCULATE BMI</button>
+        </form>
+
+        {% if bmi %}
+            <h3>YOUR BMI: {{ bmi }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
