@@ -32,6 +32,7 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM :
+```
 math.html
 
 <!DOCTYPE html>
@@ -124,8 +125,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("bmi/", views.bmi_calculator, name="bmi_calculator"),
 ]
-
-
+```
 
 
 ## SERVER SIDE PROCESSING:
